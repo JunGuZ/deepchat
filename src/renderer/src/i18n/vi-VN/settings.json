@@ -77,6 +77,8 @@
     "themeDark": "Tối",
     "themeSystem": "Theo dõi hệ thống",
     "closeToQuit": "Thoát ứng dụng khi đóng cửa sổ",
+    "keepRunningInTray": "Tiếp tục chạy nền khi đóng cửa sổ",
+    "keepRunningInTrayDesc": "Khi bật, đóng cửa sổ sẽ ẩn nó vào khay hệ thống. Khi tắt, ứng dụng sẽ thoát khi đóng cửa sổ.",
     "contentProtectionDialogTitle": "Xác nhận thay đổi bảo vệ màn hình",
     "contentProtectionEnableDesc": "Ngăn các ứng dụng chia sẻ màn hình chụp cửa sổ DeepChat để giúp bảo vệ quyền riêng tư của bạn. Không phải tất cả các ứng dụng đều tôn trọng cài đặt này; trong một số môi trường, cửa sổ màu đen có thể vẫn còn.",
     "contentProtectionDisableDesc": "Cho phép các ứng dụng chia sẻ màn hình chụp cửa sổ DeepChat.",

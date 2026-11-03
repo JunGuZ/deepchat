@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { BrowserWindow } from 'electron'
+import { app, BrowserWindow } from 'electron'
 import { SETTINGS_EVENTS } from '@/events'
 
 const activateAppOnMacMock = vi.hoisted(() => vi.fn())
@@ -334,6 +334,67 @@ describe('WindowPresenter', () => {
     }
     await expect(presenter.sendToMainWindow('deepchat:event', resumeEvent)).resolves.toBe(true)
     expect(secondWindow.webContents.send).toHaveBeenCalledWith('deepchat:event', resumeEvent)
+  })
+
+  it('quits the app when the main window closes in default mode', async () => {
+    const handlers = new Map<string, (...args: any[]) => void>()
+    const appWindow = {
+      id: 7,
+      loadURL: vi.fn(),
+      loadFile: vi.fn(),
+      on: vi.fn((eventName: string, handler: (...args: any[]) => void) => {
+        handlers.set(eventName, handler)
+      }),
+      removeListener: vi.fn(),
+      webContents: {
+        id: 70,
+        send: vi.fn(),
+        on: vi.fn(),
+        setWindowOpenHandler: vi.fn(),
+        setBackgroundThrottling: vi.fn(),
+        setFrameRate: vi.fn(),
+        openDevTools: vi.fn(),
+        isDestroyed: vi.fn(() => false)
+      },
+      isDestroyed: vi.fn(() => false),
+      isMinimized: vi.fn(() => false),
+      isFullScreen: vi.fn(() => false),
+      setContentProtection: vi.fn(),
+      setBackgroundColor: vi.fn(),
+      setHiddenInMissionControl: vi.fn(),
+      setSkipTaskbar: vi.fn(),
+      show: vi.fn(),
+      focus: vi.fn(),
+      hide: vi.fn(),
+      restore: vi.fn()
+    }
+    vi.mocked(BrowserWindow).mockImplementationOnce(function () {
+      return appWindow as any
+    })
+    ;(BrowserWindow as any).fromId = vi.fn(() => appWindow)
+
+    const { WindowPresenter } = await import('@/desktop/window')
+    const presenter = new WindowPresenter(
+      {
+        getContentProtectionEnabled: vi.fn(() => false),
+        getCloseToQuit: vi.fn(() => true)
+      } as any,
+      vi.fn(),
+      vi.fn()
+    )
+    presenter.bindTabPresenter({
+      handleWindowSizeChanged: vi.fn(),
+      handleWindowClosed: vi.fn(),
+      getWindowTabsData: vi.fn(() => [])
+    } as any)
+
+    await presenter.createAppWindow({ x: 0, y: 0 })
+    const preventDefault = vi.fn()
+    handlers.get('close')?.({ preventDefault })
+
+    expect(preventDefault).not.toHaveBeenCalled()
+    expect(appWindow.hide).not.toHaveBeenCalled()
+    expect(app.quit).toHaveBeenCalledOnce()
   })
 
   it('sets a minimum size for the settings window', async () => {

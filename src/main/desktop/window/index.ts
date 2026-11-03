@@ -5,6 +5,7 @@ import {
   shell,
   nativeImage,
   screen,
+  app,
   webContents as electronWebContents,
   type WebContents
 } from 'electron'
@@ -846,8 +847,8 @@ export class WindowPresenter implements IWindowPresenter {
         // 1. 如果是其他窗口，直接关闭
         // 2. 如果是主窗口，判断配置是否允许关闭
         // shouldPreventDefault: true隐藏, false关闭
-        const shouldQuitOnClose = this.settings.getCloseToQuit()
-        const shouldPreventDefault = windowId === this.mainWindowId && !shouldQuitOnClose
+        const shouldPreventDefault =
+          windowId === this.mainWindowId && !this.settings.getCloseToQuit()
 
         if (shouldPreventDefault) {
           logger.info(`Window ${windowId}: Preventing default close behavior, hiding instead.`)
@@ -875,6 +876,10 @@ export class WindowPresenter implements IWindowPresenter {
             appWindow.hide()
           }
         } else {
+          if (windowId === this.mainWindowId) {
+            logger.info(`Window ${windowId}: closing the main window quits the application.`)
+            app.quit()
+          }
           // 允许默认关闭行为。这将触发 'closed' 事件。
           logger.info(
             `Window ${windowId}: Allowing default close behavior (app is quitting or macOS last window configured to quit).`

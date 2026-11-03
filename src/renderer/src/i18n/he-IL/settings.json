@@ -77,6 +77,8 @@
     "themeDark": "כהה",
     "themeSystem": "עקוב אחר המערכת",
     "closeToQuit": "צא מהאפליקציה בעת סגירת החלון",
+    "keepRunningInTray": "המשך לפעול ברקע בעת סגירת החלון",
+    "keepRunningInTrayDesc": "כאשר מופעל, סגירת החלון מסתירה אותו למגש המערכת. כאשר מושבת, האפליקציה יוצאת בעת סגירת החלון.",
     "contentProtectionDialogTitle": "אשר שינוי הגנת מסך",
     "contentProtectionEnableDesc": "מנע מיישומי שיתוף מסך ללכוד את חלון DeepChat כדי לעזור להגן על פרטיותך. לא כל האפליקציות מכבדות הגדרה זו; בסביבות מסוימות עשוי להופיע חלון שחור.",
     "contentProtectionDisableDesc": "אפשר ליישומי שיתוף מסך ללכוד את חלון DeepChat.",

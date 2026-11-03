@@ -938,6 +938,7 @@ describe('main kernel contracts', () => {
         changes: [
           { key: 'fontSizeLevel', value: 3 },
           { key: 'privacyModeEnabled', value: true },
+          { key: 'closeToQuit', value: true },
           { key: 'launchAtLoginEnabled', value: true },
           { key: 'ocrAutoExtractForNonVisionModels', value: false },
           { key: 'ocrBackend', value: 'cpu' }
@@ -947,6 +948,7 @@ describe('main kernel contracts', () => {
       changes: [
         { key: 'fontSizeLevel', value: 3 },
         { key: 'privacyModeEnabled', value: true },
+        { key: 'closeToQuit', value: true },
         { key: 'launchAtLoginEnabled', value: true },
         { key: 'ocrAutoExtractForNonVisionModels', value: false },
         { key: 'ocrBackend', value: 'cpu' }

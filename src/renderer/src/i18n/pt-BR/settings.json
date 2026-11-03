@@ -77,6 +77,8 @@
     "themeDark": "Escuro",
     "themeSystem": "Seguir o sistema",
     "closeToQuit": "Sair do aplicativo ao fechar a janela",
+    "keepRunningInTray": "Continuar em segundo plano ao fechar a janela",
+    "keepRunningInTrayDesc": "Quando ativado, fechar a janela a oculta na bandeja do sistema. Quando desativado, o aplicativo é encerrado ao fechar a janela.",
     "contentProtectionDialogTitle": "Confirmar Mudança na Proteção de Tela",
     "contentProtectionEnableDesc": "Evita que aplicativos de compartilhamento de tela capturem a janela do DeepChat para ajudar a proteger sua privacidade. Nem todos os aplicativos respeitam essa configuração; em alguns ambientes, uma janela preta pode permanecer.",
     "contentProtectionDisableDesc": "Permite que aplicativos de compartilhamento de tela capturem a janela do DeepChat.",

@@ -77,6 +77,8 @@
     "themeDark": "Gelap",
     "themeSystem": "Ikut sistem",
     "closeToQuit": "Keluar dari program apabila mengklik butang tutup",
+    "keepRunningInTray": "Terus berjalan di latar belakang apabila tetingkap ditutup",
+    "keepRunningInTrayDesc": "Apabila didayakan, menutup tetingkap akan menyembunyikannya ke dulang sistem. Apabila dinyahdayakan, aplikasi akan keluar apabila tetingkap ditutup.",
     "shortcut": {
       "title": "Tetapan kekunci pintasan",
       "newChat": "Sembang baharu"

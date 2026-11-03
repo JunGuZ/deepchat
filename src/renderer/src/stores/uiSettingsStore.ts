@@ -28,6 +28,7 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
   const autoScrollEnabled = ref(true)
   const contentProtectionEnabled = ref(false)
   const privacyModeEnabled = ref(false)
+  const closeToQuit = ref(true)
   const copyWithCotEnabled = ref(true)
   const launchAtLoginEnabled = ref(false)
   const autoCompactionEnabled = ref(true)
@@ -85,6 +86,10 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
 
     if (typeof values.privacyModeEnabled === 'boolean') {
       privacyModeEnabled.value = values.privacyModeEnabled
+    }
+
+    if (typeof values.closeToQuit === 'boolean') {
+      closeToQuit.value = values.closeToQuit
     }
 
     if (typeof values.notificationsEnabled === 'boolean') {
@@ -283,6 +288,18 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
     ])
   }
 
+  const setCloseToQuit = async (enabled: boolean) => {
+    const nextValue = Boolean(enabled)
+    closeToQuit.value = nextValue
+
+    await updateSettings([
+      {
+        key: 'closeToQuit',
+        value: nextValue
+      }
+    ])
+  }
+
   const setCopyWithCotEnabled = async (enabled: boolean) => {
     const nextValue = Boolean(enabled)
     copyWithCotEnabled.value = nextValue
@@ -381,6 +398,7 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
     autoCompactionRetainRecentPairs,
     contentProtectionEnabled,
     privacyModeEnabled,
+    closeToQuit,
     copyWithCotEnabled,
     traceDebugEnabled,
     notificationsEnabled,
@@ -397,6 +415,7 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
     setAutoCompactionRetainRecentPairs,
     setContentProtectionEnabled,
     setPrivacyModeEnabled,
+    setCloseToQuit,
     setCopyWithCotEnabled,
     setTraceDebugEnabled,
     setNotificationsEnabled,

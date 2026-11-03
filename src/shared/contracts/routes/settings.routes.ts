@@ -12,6 +12,7 @@ export const SETTINGS_KEYS = [
   'autoCompactionRetainRecentPairs',
   'contentProtectionEnabled',
   'privacyModeEnabled',
+  'closeToQuit',
   'notificationsEnabled',
   'launchAtLoginEnabled',
   'traceDebugEnabled',
@@ -33,6 +34,7 @@ export const SettingsSnapshotValuesSchema = z.object({
   autoCompactionRetainRecentPairs: z.number().int(),
   contentProtectionEnabled: z.boolean(),
   privacyModeEnabled: z.boolean(),
+  closeToQuit: z.boolean(),
   notificationsEnabled: z.boolean(),
   launchAtLoginEnabled: z.boolean(),
   traceDebugEnabled: z.boolean(),
@@ -77,6 +79,10 @@ export const SettingsChangeSchema = z.discriminatedUnion('key', [
   }),
   z.object({
     key: z.literal('privacyModeEnabled'),
+    value: z.boolean()
+  }),
+  z.object({
+    key: z.literal('closeToQuit'),
     value: z.boolean()
   }),
   z.object({

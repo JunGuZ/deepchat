@@ -77,6 +77,8 @@
     "themeDark": "Scuro",
     "themeSystem": "Segui il sistema",
     "closeToQuit": "Esci dall'app facendo clic sul pulsante di chiusura",
+    "keepRunningInTray": "Continua in background alla chiusura della finestra",
+    "keepRunningInTrayDesc": "Se attivo, chiudendo la finestra questa viene nascosta nella barra delle applicazioni. Se disattivato, l'app si chiude alla chiusura della finestra.",
     "shortcut": {
       "title": "Impostazioni scorciatoie",
       "newChat": "Nuova chat"

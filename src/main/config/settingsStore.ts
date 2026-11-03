@@ -13,7 +13,7 @@ export function createSettingsStore(): SettingsStore {
       defaults: {
         language: 'system',
         providers: [],
-        closeToQuit: false,
+        closeToQuit: true,
         proxyMode: 'system',
         customProxyUrl: '',
         searchPreviewEnabled: true,

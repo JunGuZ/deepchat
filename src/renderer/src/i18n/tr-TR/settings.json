@@ -77,6 +77,8 @@
     "themeDark": "Karanlık",
     "themeSystem": "Sistemi takip edin",
     "closeToQuit": "Pencereyi kapatırken uygulamadan çık",
+    "keepRunningInTray": "Pencere kapatıldığında arka planda çalışmaya devam et",
+    "keepRunningInTrayDesc": "Etkinleştirildiğinde pencere kapatılınca sistem tepsisine gizlenir. Devre dışı bırakıldığında uygulama pencereyle birlikte kapanır.",
     "shortcut": {
       "title": "Kısayol tuşu ayarları",
       "newChat": "Yeni bir sohbet oluştur"

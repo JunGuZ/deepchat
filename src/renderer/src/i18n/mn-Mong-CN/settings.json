@@ -77,6 +77,8 @@
     "themeDark": "ᠬᠠᠷᠠᠩᠭ᠋ᠤᠢ",
     "themeSystem": "ᠶᠢ ᠳᠠᠭᠠᠬᠤ",
     "closeToQuit": "ᠢ ᠬᠠᠭᠠᠬᠤ ᠳᠠᠷᠤᠪᠴᠢ ᠶᠢ ᠳᠠᠷᠤᠬᠤ ᠳᠠᠭᠠᠨ ᠫᠷᠦᠭᠷᠠᠮ ᠠᠴᠠ ᠰᠠᠯᠬᠤ",
+    "keepRunningInTray": "Keep running in the system tray",
+    "keepRunningInTrayDesc": "When enabled, closing the window hides it to the system tray. Disable it to quit the app when the window closes.",
     "shortcut": {
       "title": "ᠲᠦᠷᠭᠡᠨ ᠳᠠᠷᠤᠪᠴᠢ ᠶᠢᠨ ᠲᠣᠬᠢᠷᠠᠭᠤᠯᠭ᠎ᠠ",
       "newChat": "ᠰᠢᠨ᠎ᠡ ᠶᠠᠷᠢᠯᠴᠠᠭ᠎ᠠ"

@@ -20,7 +20,7 @@ vi.mock('electron-store', () => ({
     private readonly key: string
 
     constructor(options: { name: string; cwd?: string; defaults?: Record<string, unknown> }) {
-      this.key = `${options.cwd ?? ''}/${options.name}`
+      this.key = `${(options.cwd ?? '').replaceAll('\\', '/')}/${options.name}`
       if (!electronStores.has(this.key)) {
         electronStores.set(this.key, { ...(options.defaults ?? {}) })
       }
@@ -46,6 +46,7 @@ describe('config storage migration', () => {
   it('moves legacy storage before modules connect to sqlite', () => {
     const legacyStore = createStore({
       appVersion: '0.9.0',
+      closeToQuit: false,
       providers: [provider('openai')],
       providerOrder: ['openai'],
       providerTimestamps: { openai: 123 },
@@ -128,6 +129,7 @@ describe('config storage migration', () => {
     )
     expect(agentTables.deleteAgentSetting).toHaveBeenCalledWith('sqlite-mainline-normalization-v1')
     expect(legacyStore.get('hooksNotifications')).toBeUndefined()
+    expect(legacyStore.get('closeToQuit')).toBe(true)
     expect(legacyStore.get('appVersion')).toBe('1.0.0')
     expect(electronStores.get('/custom_prompts')?.prompts).toEqual([])
     expect(electronStores.get('/system_prompts')?.prompts).toEqual([])

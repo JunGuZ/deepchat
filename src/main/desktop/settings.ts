@@ -133,7 +133,17 @@ export class DesktopSettings {
   }
 
   getCloseToQuit(): boolean {
-    return this.settings.get<boolean>('closeToQuit') ?? false
+    return this.settings.get<boolean>('closeToQuit') ?? true
+  }
+
+  setCloseToQuit(enabled: boolean): void {
+    const value = Boolean(enabled)
+    this.settings.set('closeToQuit', value)
+    this.publishEvent('settings.changed', {
+      changedKeys: ['closeToQuit'],
+      version: Date.now(),
+      values: { closeToQuit: value }
+    })
   }
 
   getContentProtectionEnabled(): boolean {

@@ -77,6 +77,8 @@
     "themeDark": "深色",
     "themeSystem": "跟隨系統",
     "closeToQuit": "點擊關閉按鈕時退出程序",
+    "keepRunningInTray": "關閉視窗後繼續在背景執行",
+    "keepRunningInTrayDesc": "開啟後，點擊關閉只會隱藏視窗，可從系統匣重新開啟；關閉此選項則點擊關閉即退出程式。",
     "contentProtection": "投屏保護",
     "contentProtectionDialogTitle": "確認切換投屏保護",
     "contentProtectionEnableDesc": "開啟投屏保護可以防止投屏軟件捕獲DeepChat主窗口，用來保護您的內容隱私。請注意，此功能不會徹底隱藏所有界面，請合理合規使用。並且，並不是所有投屏軟件都遵守用戶隱私設定，該功能可能在一些不遵守隱私設定的投屏軟件上失效，且部分環境中可能會殘留一個黑色窗體。",

@@ -77,6 +77,8 @@
     "themeDark": "Dunkel",
     "themeSystem": "System folgen",
     "closeToQuit": "App beim Klick auf Schließen beenden",
+    "keepRunningInTray": "Im Hintergrund weiterlaufen, wenn das Fenster geschlossen wird",
+    "keepRunningInTrayDesc": "Wenn aktiviert, wird das Fenster beim Schließen in den Systemtray ausgeblendet. Wenn deaktiviert, wird die App beim Schließen beendet.",
     "shortcut": {
       "title": "Tastenkürzel-Einstellungen",
       "newChat": "Neuen Chat erstellen"

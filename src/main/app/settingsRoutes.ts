@@ -80,6 +80,7 @@ export function createAppSettingsRoutes(deps: {
     autoCompactionRetainRecentPairs: deps.agentDefaults.getAutoCompactionRetainRecentPairs(),
     contentProtectionEnabled: deps.desktopSettings.getContentProtectionEnabled(),
     privacyModeEnabled: deps.privacy.isEnabled(),
+    closeToQuit: deps.desktopSettings.getCloseToQuit(),
     notificationsEnabled: deps.desktopSettings.getNotificationsEnabled(),
     launchAtLoginEnabled: deps.desktopSettings.getLaunchAtLoginEnabled(),
     traceDebugEnabled: deps.traceSettings.isEnabled(),
@@ -127,6 +128,9 @@ export function createAppSettingsRoutes(deps: {
         return
       case 'privacyModeEnabled':
         deps.privacy.setEnabled(change.value)
+        return
+      case 'closeToQuit':
+        deps.desktopSettings.setCloseToQuit(change.value)
         return
       case 'notificationsEnabled':
         deps.desktopSettings.setNotificationsEnabled(change.value)

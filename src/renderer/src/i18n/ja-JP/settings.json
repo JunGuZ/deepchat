@@ -89,6 +89,8 @@
     "themeDark": "ダーク",
     "themeSystem": "システムに従う",
     "closeToQuit": "閉じるボタンでアプリを終了",
+    "keepRunningInTray": "ウィンドウを閉じてもバックグラウンドで実行を続ける",
+    "keepRunningInTrayDesc": "有効にすると、閉じるボタンでウィンドウがシステムトレイに隠れます。無効にすると、ウィンドウを閉じたときにアプリが終了します。",
     "openLogFolder": "ログフォルダを開く",
     "shortcut": {
       "newChat": "新しいチャットを作成",

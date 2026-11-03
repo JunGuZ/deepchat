@@ -77,6 +77,8 @@
     "themeDark": "Mørk",
     "themeSystem": "Følg systemet",
     "closeToQuit": "Afslut appen ved lukning af vindue",
+    "keepRunningInTray": "Fortsæt i baggrunden, når vinduet lukkes",
+    "keepRunningInTrayDesc": "Når den er aktiveret, skjules vinduet i systembakken ved lukning. Når den er deaktiveret, afsluttes appen, når vinduet lukkes.",
     "contentProtectionDialogTitle": "Bekræft ændring af skærmbeskyttelse",
     "contentProtectionEnableDesc": "Forhindrer skærmdelingsapps i at optage DeepChat-vinduet og beskytter din fortrolighed. Ikke alle apps respekterer dette; i nogle miljøer kan et sort vindue blive vist.",
     "contentProtectionDisableDesc": "Tillad skærmdelingsapps at optage DeepChat-vinduet.",

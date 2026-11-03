@@ -2279,6 +2279,8 @@ declare module 'vue-i18n' {
       themeDark: string
       themeSystem: string
       closeToQuit: string
+      keepRunningInTray: string
+      keepRunningInTrayDesc: string
       shortcut: {
         title: string
         newChat: string

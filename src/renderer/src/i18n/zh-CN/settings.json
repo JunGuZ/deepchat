@@ -77,6 +77,8 @@
     "themeDark": "深色",
     "themeSystem": "跟随系统",
     "closeToQuit": "点击关闭按钮时退出程序",
+    "keepRunningInTray": "关闭窗口后继续在后台运行",
+    "keepRunningInTrayDesc": "开启后，点击关闭按钮只会隐藏窗口，可从系统托盘重新打开；关闭此选项则点击关闭即退出程序。",
     "shortcut": {
       "title": "快捷键设置",
       "newChat": "新建聊天"

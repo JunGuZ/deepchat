@@ -21,6 +21,7 @@ import { RAW_PROVIDER_MODEL_FACTS_MIGRATION_ID } from '@/provider/providerModelF
 
 const PROVIDER_MODELS_DIR = 'provider_models'
 const APP_STARTUP_STATE_MIGRATION_ID = 'app-startup-state-v1'
+const CLOSE_TO_QUIT_MIGRATION_ID = 'close-to-quit-default-v1'
 const LEGACY_APP_STARTUP_STATE_KEYS = [
   'sqlite-mainline-normalization-v1',
   'agent-disabled-search-tool-cleanup-v1'
@@ -54,6 +55,7 @@ export function migrateConfigStorage(options: {
   migrateModelConfigsToUserOnly(options)
   migrateSensitiveConfigToSqlite(options)
   migrateAppStartupState(options)
+  migrateCloseToQuitDefault(options)
 
   const appVersionChanged = previousAppVersion !== currentAppVersion
   if (appVersionChanged) {
@@ -214,6 +216,16 @@ function migrateAppStartupState(options: Parameters<typeof migrateConfigStorage>
     agentSettings.deleteAgentSetting(key)
   }
   appSettingsTable.markConfigMigrationApplied(APP_STARTUP_STATE_MIGRATION_ID)
+}
+
+function migrateCloseToQuitDefault(options: Parameters<typeof migrateConfigStorage>[0]): void {
+  const appSettingsTable = options.database.appSettingsTable
+  if (appSettingsTable.hasConfigMigration(CLOSE_TO_QUIT_MIGRATION_ID)) {
+    return
+  }
+
+  options.settings.set('closeToQuit', true)
+  appSettingsTable.markConfigMigrationApplied(CLOSE_TO_QUIT_MIGRATION_ID)
 }
 
 function readLegacyModelConfigs(): Record<string, IModelConfig> {

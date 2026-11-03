@@ -77,6 +77,8 @@
     "themeDark": "قاراڭغۇ",
     "themeSystem": "سىستېمىغا ئەگىشىش",
     "closeToQuit": "يېپىش كۇنۇپكىسىنى چېكىش بىلەن پروگراممىدىن چىقىش",
+    "keepRunningInTray": "Keep running in the system tray",
+    "keepRunningInTrayDesc": "When enabled, closing the window hides it to the system tray. Disable it to quit the app when the window closes.",
     "contentProtectionDialogTitle": "ئەسىل يېزىش مۇداپىئەسى ئالماشتۇرۇش جەزملەش",
     "contentProtectionEnableDesc": "ئەسىل يېزىش مۇداپىئەسىنى ئچساڭىز، يېزىش پروگراممىسى DeepChatنىڭ ئاساسى پەنجىرىسىنى تۇتالمىغاندەك قىلىدۇ، مەزمۇنىڭىزنىڭ مەخپىيلىكىنى قوغدايدۇ. دىققەت قىلىڭ، بۇ ئىقتىدار بارلىق كۈرگەزمەنى پۈتۈنلەي يوشۇرمايدۇ، ئەخلەت قانۇنى بويىچە توغرا ئىشلىتىڭ. ھەمدە، ھەممە يېزىش پروگراممىلىرى قوللانغۇچى مەخپىيلىك تەڭشەلمىسىگە رىئايە قىلمايدۇ، بۇ ئىقتىدار بەزى رىئايە قىلمايدىغان يېزىش پروگراممىلىرىدا ئىشلىمەسلىكى مۇمكىن، ھەم بەزى مۇھىتتا بىر قارا پەنجىرە قالىشى مۇمكىن.",
     "contentProtectionDisableDesc": "ئەسىل يېزىش مۇداپىئەسىنى ئچساڭىز، يېزىش پروگراممىسى DeepChat پەنجىرىسىنى تۇتالايدۇ.",

@@ -77,6 +77,8 @@
     "themeDark": "Gelap",
     "themeSystem": "Ikuti sistemnya",
     "closeToQuit": "Keluar dari program ketika mengklik tombol tutup",
+    "keepRunningInTray": "Tetap berjalan di latar belakang saat jendela ditutup",
+    "keepRunningInTrayDesc": "Jika diaktifkan, menutup jendela akan menyembunyikannya ke baki sistem. Jika dinonaktifkan, aplikasi akan keluar saat jendela ditutup.",
     "shortcut": {
       "title": "Pengaturan tombol pintas",
       "newChat": "Obrolan baru"

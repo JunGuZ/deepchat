@@ -77,6 +77,8 @@
     "themeDark": "Ciemny",
     "themeSystem": "Postępuj zgodnie z systemem",
     "closeToQuit": "Wyjdź z aplikacji po zamknięciu okna",
+    "keepRunningInTray": "Kontynuuj działanie w tle po zamknięciu okna",
+    "keepRunningInTrayDesc": "Po włączeniu zamknięcie okna ukrywa je w zasobniku systemowym. Po wyłączeniu zamknięcie okna kończy aplikację.",
     "contentProtectionDialogTitle": "Potwierdź zmianę ochrony ekranu",
     "contentProtectionEnableDesc": "Uniemożliwiaj aplikacjom do udostępniania ekranu przechwytywanie okna DeepChat, aby chronić swoją prywatność. Nie wszystkie aplikacje obsługują to ustawienie; w niektórych środowiskach może pozostać czarne okno.",
     "contentProtectionDisableDesc": "Zezwalaj aplikacjom do udostępniania ekranu na przechwytywanie okna DeepChat.",

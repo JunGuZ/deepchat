@@ -77,6 +77,8 @@
     "themeDark": "Oscuro",
     "themeSystem": "Seguir sistema",
     "closeToQuit": "Salir de la aplicación al cerrar la ventana",
+    "keepRunningInTray": "Continuar en segundo plano al cerrar la ventana",
+    "keepRunningInTrayDesc": "Si se activa, cerrar la ventana la oculta en la bandeja del sistema. Si se desactiva, la aplicación se cierra al cerrar la ventana.",
     "shortcut": {
       "title": "Ajustes de atajos de teclado",
       "newChat": "Crear un nuevo chat"

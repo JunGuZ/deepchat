@@ -9,6 +9,15 @@
       <ProxySettingsSection />
       <CommandShellSettingsSection />
       <DcToggleRow
+        id="keep-running-in-tray-switch"
+        icon="lucide:panel-bottom-close"
+        :label="t('settings.common.keepRunningInTray')"
+        :description="t('settings.common.keepRunningInTrayDesc')"
+        label-min-width="220px"
+        :model-value="!closeToQuit"
+        @update:model-value="handleKeepRunningInTrayChange"
+      />
+      <DcToggleRow
         id="launch-at-login-switch"
         icon="lucide:power"
         :label="t('settings.common.launchAtLoginEnabled')"
@@ -65,6 +74,7 @@ const autoScrollEnabled = computed(() => uiSettingsStore.autoScrollEnabled)
 const copyWithCotEnabled = computed(() => uiSettingsStore.copyWithCotEnabled)
 const traceDebugEnabled = computed(() => uiSettingsStore.traceDebugEnabled)
 const launchAtLoginEnabled = computed(() => uiSettingsStore.launchAtLoginEnabled)
+const closeToQuit = computed(() => uiSettingsStore.closeToQuit)
 
 const handleAutoScrollChange = (value: boolean) => {
   uiSettingsStore.setAutoScrollEnabled(value)
@@ -80,5 +90,9 @@ const handleCopyWithCotChange = (value: boolean) => {
 
 const handleTraceDebugChange = (value: boolean) => {
   uiSettingsStore.setTraceDebugEnabled(value)
+}
+
+const handleKeepRunningInTrayChange = (value: boolean) => {
+  uiSettingsStore.setCloseToQuit(!value)
 }
 </script>
